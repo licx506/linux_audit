@@ -144,19 +144,30 @@ try:
 except Exception:
     data = {}
 
-values = data.get(os_id) or data.get("default") or []
 names = []
+seen = set()
 
-if isinstance(values, dict):
-    values = values.get("items", [])
+def add_items(item_list):
+    for item in item_list:
+        if isinstance(item, str):
+            if item not in seen:
+                names.append(item)
+                seen.add(item)
+        elif isinstance(item, dict):
+            name = item.get("name")
+            if name and name not in seen:
+                names.append(str(name))
+                seen.add(name)
 
-for item in values:
-    if isinstance(item, str):
-        names.append(item)
-    elif isinstance(item, dict):
-        name = item.get("name")
-        if name:
-            names.append(str(name))
+common_list = data.get("common", [])
+add_items(common_list)
+
+os_specific = data.get(os_id, [])
+add_items(os_specific)
+
+if not names:
+    default_list = data.get("default", [])
+    add_items(default_list)
 
 print(" ".join(names))
 PY
@@ -174,6 +185,12 @@ analyze_processes() {
     local user_procs=""
     local unknown_procs=""
     
+    # 构建进程白名单的快速查找集合
+    declare -A whitelist_set
+    for proc in $DEFAULT_PROCS; do
+        whitelist_set["$proc"]=1
+    done
+    
     # 读取进程列表（跳过标题行）
     tail -n +2 "${OUTPUT_DIR}/all_processes.txt" | while read -r line; do
         user=$(echo "$line" | awk '{print $1}')
@@ -183,14 +200,18 @@ analyze_processes() {
         cmd=$(echo "$line" | awk '{print $11}')
         proc_name=$(basename "$cmd" 2>/dev/null || echo "$cmd")
         
-        # 判断进程类型
+        # 判断进程类型 - 使用精确匹配优先，回退到子串匹配
         is_default=0
-        for default_proc in $DEFAULT_PROCS; do
-            if echo "$proc_name" | grep -q "$default_proc"; then
-                is_default=1
-                break
-            fi
-        done
+        if [ -n "${whitelist_set["$proc_name"]}" ]; then
+            is_default=1
+        else
+            for default_proc in $DEFAULT_PROCS; do
+                if [[ "$proc_name" == *"$default_proc"* ]]; then
+                    is_default=1
+                    break
+                fi
+            done
+        fi
         
         # 输出进程信息
         if [ "$user" = "root" ]; then
