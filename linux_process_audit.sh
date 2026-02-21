@@ -185,12 +185,6 @@ analyze_processes() {
     local user_procs=""
     local unknown_procs=""
     
-    # 构建进程白名单的快速查找集合
-    declare -A whitelist_set
-    for proc in $DEFAULT_PROCS; do
-        whitelist_set["$proc"]=1
-    done
-    
     # 读取进程列表（跳过标题行）
     tail -n +2 "${OUTPUT_DIR}/all_processes.txt" | while read -r line; do
         user=$(echo "$line" | awk '{print $1}')
@@ -200,18 +194,14 @@ analyze_processes() {
         cmd=$(echo "$line" | awk '{print $11}')
         proc_name=$(basename "$cmd" 2>/dev/null || echo "$cmd")
         
-        # 判断进程类型 - 使用精确匹配优先，回退到子串匹配
+        # 判断进程类型
         is_default=0
-        if [ -n "${whitelist_set["$proc_name"]}" ]; then
-            is_default=1
-        else
-            for default_proc in $DEFAULT_PROCS; do
-                if [[ "$proc_name" == *"$default_proc"* ]]; then
-                    is_default=1
-                    break
-                fi
-            done
-        fi
+        for default_proc in $DEFAULT_PROCS; do
+            if [ "$proc_name" = "$default_proc" ] || [[ "$proc_name" == *"$default_proc"* ]]; then
+                is_default=1
+                break
+            fi
+        done
         
         # 输出进程信息
         if [ "$user" = "root" ]; then
