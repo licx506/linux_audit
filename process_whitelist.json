@@ -1,0 +1,748 @@
+{
+  "default": [
+    {
+      "name": "systemd",
+      "desc": "系统初始化与服务管理",
+      "risk": "low"
+    },
+    {
+      "name": "dbus",
+      "desc": "进程间消息总线",
+      "risk": "low"
+    },
+    {
+      "name": "cron",
+      "desc": "计划任务服务",
+      "risk": "low"
+    },
+    {
+      "name": "crond",
+      "desc": "计划任务服务(变体)",
+      "risk": "low"
+    },
+    {
+      "name": "cronie",
+      "desc": "计划任务服务(变体)",
+      "risk": "low"
+    },
+    {
+      "name": "rsyslogd",
+      "desc": "系统日志守护进程",
+      "risk": "low"
+    },
+    {
+      "name": "sshd",
+      "desc": "SSH 远程登录服务",
+      "risk": "medium"
+    },
+    {
+      "name": "agetty",
+      "desc": "虚拟终端登录",
+      "risk": "low"
+    },
+    {
+      "name": "getty",
+      "desc": "终端登录(变体)",
+      "risk": "low"
+    },
+    {
+      "name": "polkitd",
+      "desc": "权限策略服务",
+      "risk": "low"
+    },
+    {
+      "name": "NetworkManager",
+      "desc": "网络连接管理",
+      "risk": "low"
+    }
+  ],
+  "ubuntu": [
+    {
+      "name": "systemd",
+      "desc": "系统初始化与服务管理",
+      "risk": "low"
+    },
+    {
+      "name": "systemd-journal",
+      "desc": "systemd 日志服务",
+      "risk": "low"
+    },
+    {
+      "name": "systemd-network",
+      "desc": "systemd 网络管理",
+      "risk": "low"
+    },
+    {
+      "name": "systemd-resolve",
+      "desc": "DNS 解析服务",
+      "risk": "low"
+    },
+    {
+      "name": "dbus",
+      "desc": "进程间消息总线",
+      "risk": "low"
+    },
+    {
+      "name": "cron",
+      "desc": "计划任务服务",
+      "risk": "low"
+    },
+    {
+      "name": "rsyslogd",
+      "desc": "系统日志守护进程",
+      "risk": "low"
+    },
+    {
+      "name": "sshd",
+      "desc": "SSH 远程登录服务",
+      "risk": "medium"
+    },
+    {
+      "name": "agetty",
+      "desc": "虚拟终端登录",
+      "risk": "low"
+    },
+    {
+      "name": "polkitd",
+      "desc": "权限策略服务",
+      "risk": "low"
+    },
+    {
+      "name": "unattended-upgr",
+      "desc": "自动安全更新",
+      "risk": "low"
+    },
+    {
+      "name": "networkd-dispa",
+      "desc": "网络状态分发",
+      "risk": "low"
+    }
+  ],
+  "debian": [
+    {
+      "name": "systemd",
+      "desc": "系统初始化与服务管理",
+      "risk": "low"
+    },
+    {
+      "name": "systemd-journal",
+      "desc": "systemd 日志服务",
+      "risk": "low"
+    },
+    {
+      "name": "systemd-network",
+      "desc": "systemd 网络管理",
+      "risk": "low"
+    },
+    {
+      "name": "systemd-resolve",
+      "desc": "DNS 解析服务",
+      "risk": "low"
+    },
+    {
+      "name": "dbus",
+      "desc": "进程间消息总线",
+      "risk": "low"
+    },
+    {
+      "name": "cron",
+      "desc": "计划任务服务",
+      "risk": "low"
+    },
+    {
+      "name": "rsyslogd",
+      "desc": "系统日志守护进程",
+      "risk": "low"
+    },
+    {
+      "name": "sshd",
+      "desc": "SSH 远程登录服务",
+      "risk": "medium"
+    },
+    {
+      "name": "agetty",
+      "desc": "虚拟终端登录",
+      "risk": "low"
+    },
+    {
+      "name": "polkitd",
+      "desc": "权限策略服务",
+      "risk": "low"
+    },
+    {
+      "name": "unattended-upgr",
+      "desc": "自动安全更新",
+      "risk": "low"
+    },
+    {
+      "name": "networkd-dispa",
+      "desc": "网络状态分发",
+      "risk": "low"
+    }
+  ],
+  "centos": [
+    {
+      "name": "systemd",
+      "desc": "系统初始化与服务管理",
+      "risk": "low"
+    },
+    {
+      "name": "systemd-journal",
+      "desc": "systemd 日志服务",
+      "risk": "low"
+    },
+    {
+      "name": "systemd-network",
+      "desc": "systemd 网络管理",
+      "risk": "low"
+    },
+    {
+      "name": "systemd-resolve",
+      "desc": "DNS 解析服务",
+      "risk": "low"
+    },
+    {
+      "name": "dbus",
+      "desc": "进程间消息总线",
+      "risk": "low"
+    },
+    {
+      "name": "crond",
+      "desc": "计划任务服务",
+      "risk": "low"
+    },
+    {
+      "name": "rsyslogd",
+      "desc": "系统日志守护进程",
+      "risk": "low"
+    },
+    {
+      "name": "sshd",
+      "desc": "SSH 远程登录服务",
+      "risk": "medium"
+    },
+    {
+      "name": "agetty",
+      "desc": "虚拟终端登录",
+      "risk": "low"
+    },
+    {
+      "name": "polkitd",
+      "desc": "权限策略服务",
+      "risk": "low"
+    },
+    {
+      "name": "NetworkManager",
+      "desc": "网络连接管理",
+      "risk": "low"
+    },
+    {
+      "name": "tuned",
+      "desc": "性能调优守护进程",
+      "risk": "low"
+    }
+  ],
+  "rhel": [
+    {
+      "name": "systemd",
+      "desc": "系统初始化与服务管理",
+      "risk": "low"
+    },
+    {
+      "name": "systemd-journal",
+      "desc": "systemd 日志服务",
+      "risk": "low"
+    },
+    {
+      "name": "systemd-network",
+      "desc": "systemd 网络管理",
+      "risk": "low"
+    },
+    {
+      "name": "systemd-resolve",
+      "desc": "DNS 解析服务",
+      "risk": "low"
+    },
+    {
+      "name": "dbus",
+      "desc": "进程间消息总线",
+      "risk": "low"
+    },
+    {
+      "name": "crond",
+      "desc": "计划任务服务",
+      "risk": "low"
+    },
+    {
+      "name": "rsyslogd",
+      "desc": "系统日志守护进程",
+      "risk": "low"
+    },
+    {
+      "name": "sshd",
+      "desc": "SSH 远程登录服务",
+      "risk": "medium"
+    },
+    {
+      "name": "agetty",
+      "desc": "虚拟终端登录",
+      "risk": "low"
+    },
+    {
+      "name": "polkitd",
+      "desc": "权限策略服务",
+      "risk": "low"
+    },
+    {
+      "name": "NetworkManager",
+      "desc": "网络连接管理",
+      "risk": "low"
+    },
+    {
+      "name": "tuned",
+      "desc": "性能调优守护进程",
+      "risk": "low"
+    }
+  ],
+  "fedora": [
+    {
+      "name": "systemd",
+      "desc": "系统初始化与服务管理",
+      "risk": "low"
+    },
+    {
+      "name": "systemd-journal",
+      "desc": "systemd 日志服务",
+      "risk": "low"
+    },
+    {
+      "name": "systemd-network",
+      "desc": "systemd 网络管理",
+      "risk": "low"
+    },
+    {
+      "name": "systemd-resolve",
+      "desc": "DNS 解析服务",
+      "risk": "low"
+    },
+    {
+      "name": "dbus",
+      "desc": "进程间消息总线",
+      "risk": "low"
+    },
+    {
+      "name": "crонд",
+      "desc": "计划任务服务",
+      "risk": "low"
+    },
+    {
+      "name": "rsyslogd",
+      "desc": "系统日志守护进程",
+      "risk": "low"
+    },
+    {
+      "name": "sshd",
+      "desc": "SSH 远程登录服务",
+      "risk": "medium"
+    },
+    {
+      "name": "agetty",
+      "desc": "虚拟终端登录",
+      "risk": "low"
+    },
+    {
+      "name": "polkitd",
+      "desc": "权限策略服务",
+      "risk": "low"
+    },
+    {
+      "name": "NetworkManager",
+      "desc": "网络连接管理",
+      "risk": "low"
+    },
+    {
+      "name": "tuned",
+      "desc": "性能调优守护进程",
+      "risk": "low"
+    }
+  ],
+  "rocky": [
+    {
+      "name": "systemd",
+      "desc": "系统初始化与服务管理",
+      "risk": "low"
+    },
+    {
+      "name": "systemd-journal",
+      "desc": "systemd 日志服务",
+      "risk": "low"
+    },
+    {
+      "name": "systemd-network",
+      "desc": "systemd 网络管理",
+      "risk": "low"
+    },
+    {
+      "name": "systemd-resolve",
+      "desc": "DNS 解析服务",
+      "risk": "low"
+    },
+    {
+      "name": "dbus",
+      "desc": "进程间消息总线",
+      "risk": "low"
+    },
+    {
+      "name": "crond",
+      "desc": "计划任务服务",
+      "risk": "low"
+    },
+    {
+      "name": "rsyslogd",
+      "desc": "系统日志守护进程",
+      "risk": "low"
+    },
+    {
+      "name": "sshd",
+      "desc": "SSH 远程登录服务",
+      "risk": "medium"
+    },
+    {
+      "name": "agetty",
+      "desc": "虚拟终端登录",
+      "risk": "low"
+    },
+    {
+      "name": "polkitd",
+      "desc": "权限策略服务",
+      "risk": "low"
+    },
+    {
+      "name": "NetworkManager",
+      "desc": "网络连接管理",
+      "risk": "low"
+    },
+    {
+      "name": "tuned",
+      "desc": "性能调优守护进程",
+      "risk": "low"
+    }
+  ],
+  "almalinux": [
+    {
+      "name": "systemd",
+      "desc": "系统初始化与服务管理",
+      "risk": "low"
+    },
+    {
+      "name": "systemd-journal",
+      "desc": "systemd 日志服务",
+      "risk": "low"
+    },
+    {
+      "name": "systemd-network",
+      "desc": "systemd 网络管理",
+      "risk": "low"
+    },
+    {
+      "name": "systemd-resolve",
+      "desc": "DNS 解析服务",
+      "risk": "low"
+    },
+    {
+      "name": "dbus",
+      "desc": "进程间消息总线",
+      "risk": "low"
+    },
+    {
+      "name": "crond",
+      "desc": "计划任务服务",
+      "risk": "low"
+    },
+    {
+      "name": "rsyslogd",
+      "desc": "系统日志守护进程",
+      "risk": "low"
+    },
+    {
+      "name": "sshd",
+      "desc": "SSH 远程登录服务",
+      "risk": "medium"
+    },
+    {
+      "name": "agetty",
+      "desc": "虚拟终端登录",
+      "risk": "low"
+    },
+    {
+      "name": "polkitd",
+      "desc": "权限策略服务",
+      "risk": "low"
+    },
+    {
+      "name": "NetworkManager",
+      "desc": "网络连接管理",
+      "risk": "low"
+    },
+    {
+      "name": "tuned",
+      "desc": "性能调优守护进程",
+      "risk": "low"
+    }
+  ],
+  "alpine": [
+    {
+      "name": "init",
+      "desc": "系统初始化",
+      "risk": "low"
+    },
+    {
+      "name": "crond",
+      "desc": "计划任务服务",
+      "risk": "low"
+    },
+    {
+      "name": "syslogd",
+      "desc": "系统日志守护进程",
+      "risk": "low"
+    },
+    {
+      "name": "sshd",
+      "desc": "SSH 远程登录服务",
+      "risk": "medium"
+    },
+    {
+      "name": "getty",
+      "desc": "终端登录",
+      "risk": "low"
+    }
+  ],
+  "arch": [
+    {
+      "name": "systemd",
+      "desc": "系统初始化与服务管理",
+      "risk": "low"
+    },
+    {
+      "name": "systemd-journal",
+      "desc": "systemd 日志服务",
+      "risk": "low"
+    },
+    {
+      "name": "systemd-network",
+      "desc": "systemd 网络管理",
+      "risk": "low"
+    },
+    {
+      "name": "systemd-resolve",
+      "desc": "DNS 解析服务",
+      "risk": "low"
+    },
+    {
+      "name": "dbus",
+      "desc": "进程间消息总线",
+      "risk": "low"
+    },
+    {
+      "name": "cronie",
+      "desc": "计划任务服务",
+      "risk": "low"
+    },
+    {
+      "name": "rsyslogd",
+      "desc": "系统日志守护进程",
+      "risk": "low"
+    },
+    {
+      "name": "sshd",
+      "desc": "SSH 远程登录服务",
+      "risk": "medium"
+    },
+    {
+      "name": "agetty",
+      "desc": "虚拟终端登录",
+      "risk": "low"
+    },
+    {
+      "name": "polkitd",
+      "desc": "权限策略服务",
+      "risk": "low"
+    },
+    {
+      "name": "NetworkManager",
+      "desc": "网络连接管理",
+      "risk": "low"
+    }
+  ],
+  "manjaro": [
+    {
+      "name": "systemd",
+      "desc": "系统初始化与服务管理",
+      "risk": "low"
+    },
+    {
+      "name": "systemd-journal",
+      "desc": "systemd 日志服务",
+      "risk": "low"
+    },
+    {
+      "name": "systemd-network",
+      "desc": "systemd 网络管理",
+      "risk": "low"
+    },
+    {
+      "name": "systemd-resolve",
+      "desc": "DNS 解析服务",
+      "risk": "low"
+    },
+    {
+      "name": "dbus",
+      "desc": "进程间消息总线",
+      "risk": "low"
+    },
+    {
+      "name": "cronie",
+      "desc": "计划任务服务",
+      "risk": "low"
+    },
+    {
+      "name": "rsyslogd",
+      "desc": "系统日志守护进程",
+      "risk": "low"
+    },
+    {
+      "name": "sshd",
+      "desc": "SSH 远程登录服务",
+      "risk": "medium"
+    },
+    {
+      "name": "agetty",
+      "desc": "虚拟终端登录",
+      "risk": "low"
+    },
+    {
+      "name": "polkitd",
+      "desc": "权限策略服务",
+      "risk": "low"
+    },
+    {
+      "name": "NetworkManager",
+      "desc": "网络连接管理",
+      "risk": "low"
+    }
+  ],
+  "suse": [
+    {
+      "name": "systemd",
+      "desc": "系统初始化与服务管理",
+      "risk": "low"
+    },
+    {
+      "name": "systemd-journal",
+      "desc": "systemd 日志服务",
+      "risk": "low"
+    },
+    {
+      "name": "systemd-network",
+      "desc": "systemd 网络管理",
+      "risk": "low"
+    },
+    {
+      "name": "systemd-resolve",
+      "desc": "DNS 解析服务",
+      "risk": "low"
+    },
+    {
+      "name": "dbus",
+      "desc": "进程间消息总线",
+      "risk": "low"
+    },
+    {
+      "name": "cron",
+      "desc": "计划任务服务",
+      "risk": "low"
+    },
+    {
+      "name": "rsyslogd",
+      "desc": "系统日志守护进程",
+      "risk": "low"
+    },
+    {
+      "name": "sshd",
+      "desc": "SSH 远程登录服务",
+      "risk": "medium"
+    },
+    {
+      "name": "agetty",
+      "desc": "虚拟终端登录",
+      "risk": "low"
+    },
+    {
+      "name": "polkitd",
+      "desc": "权限策略服务",
+      "risk": "low"
+    },
+    {
+      "name": "NetworkManager",
+      "desc": "网络连接管理",
+      "risk": "low"
+    }
+  ],
+  "opensuse": [
+    {
+      "name": "systemd",
+      "desc": "系统初始化与服务管理",
+      "risk": "low"
+    },
+    {
+      "name": "systemd-journal",
+      "desc": "systemd 日志服务",
+      "risk": "low"
+    },
+    {
+      "name": "systemd-network",
+      "desc": "systemd 网络管理",
+      "risk": "low"
+    },
+    {
+      "name": "systemd-resolve",
+      "desc": "DNS 解析服务",
+      "risk": "low"
+    },
+    {
+      "name": "dbus",
+      "desc": "进程间消息总线",
+      "risk": "low"
+    },
+    {
+      "name": "cron",
+      "desc": "计划任务服务",
+      "risk": "low"
+    },
+    {
+      "name": "rsyslogd",
+      "desc": "系统日志守护进程",
+      "risk": "low"
+    },
+    {
+      "name": "sshd",
+      "desc": "SSH 远程登录服务",
+      "risk": "medium"
+    },
+    {
+      "name": "agetty",
+      "desc": "虚拟终端登录",
+      "risk": "low"
+    },
+    {
+      "name": "polkitd",
+      "desc": "权限策略服务",
+      "risk": "low"
+    },
+    {
+      "name": "NetworkManager",
+      "desc": "网络连接管理",
+      "risk": "low"
+    }
+  ]
+}
